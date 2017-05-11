@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.icon {
+			width: 46px;
+			height: 48px;
+			background-color: #81b3d2;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			border: 5px solid white;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		.icon_tw {
+			background-image: url(img/social_tw.svg);
+			
+			
+			width: 100px;
+			height: 100px;
+			background-size: contain;
+		}
+		
+		.icon_fb {
+			
+			background-image: url(img/social_fb.svg);
+		}
+		
+		.icon_yt {
+			background-image: url(img/social_yt.svg);
+		}
+		
+		.icon_sprite {
+			background-size: 100% auto;
+			background-position: 0 0;
+		}
+		
+		.icon_sprite:hover {
+			background-color: #669ec0;
+		}
+		
+		.icon_sprite:active {
+			background-position: 0 -96px;
+			background-color: #5496bd;
+		}
+		
+		.icon_sprite_tw {
+			background-image: url(img/sprite_3_tw.svg);
+		}
+		
+		.icon_sprite_fb {
+			background-image: url(img/sprite_3_fb.svg);
+		}
+		
+		.icon_sprite_yt {
+			background-image: url(img/sprite_3_yt.svg);
+		}
+		
+		.icon_sprite_black {
+			background-color: #fff;
+			background-image: url(img/sprite_3.svg);
+		}
+		
+		.icon_sprite_black:hover {
+			background-position: 0 -48px;
+			background-color: #fff;
+		}
+		
+		.icon_sprite_black:active {
+			background-position: 0 -96px;
+			background-color: #fff;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="icon icon_tw"></div>
+	<div class="icon icon_fb"></div>
+	<div class="icon icon_yt"></div>
+	<br>
+	<div class="icon icon_sprite icon_sprite_black"></div>
+	<div class="icon icon_sprite icon_sprite_tw"></div>
+	<div class="icon icon_sprite icon_sprite_fb"></div>
+	<div class="icon icon_sprite icon_sprite_yt"></div>
+</body>
+</html>

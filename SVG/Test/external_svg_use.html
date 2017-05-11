@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.peka {
+			width: 100px;
+			height: 100px;
+			background-color: gray;
+			text-align: center;
+		}
+		
+		.peka svg {
+			max-width: 100%;
+			max-height: 100%;
+/*			margin: auto;*/
+			fill: white;
+			height: 100%;
+		}
+		
+		.peka:hover svg {
+			fill: lime;
+		}
+	</style>
+</head>
+<body>
+	<div class="peka">
+		<svg class="icon_facebook" width="30" height="40">
+			<use xlink:href="img/external_sprite.svg#icon_twitter"></use>
+		</svg>
+	</div>
+	
+	<script src="js/svg4everybody.min.js"></script>
+<script>svg4everybody(); // run it now or whenever you are ready</script>
+</body>
+</html>
