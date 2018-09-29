@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+	<script>
+				//генерируем случайный массив
+		var strings = [];
+		
+		function genRandom () {
+			var random = Math.floor( Math.random() * 256 );
+			return random;
+		}
+		
+		for (var i = 0; i < 10000000; i++) {
+			var random = genRandom();
+			strings.push(random);
+		}
+		
+	
+		
+//		console.log(strings.length);
+		
+//		Тест выдаёт во сколько раз одна ф-ция быстрее другой
+		
+		function peka(arr, x) { 
+			var answer = null;
+				for (var i = 0; i < arr.length; i++) {
+					if(arr[i] == x) {
+						answer = i;
+						return answer;
+					}
+				}
+		}
+
+		function peka2(arr, x) { 
+			var lastIndex = arr.length-1;
+			var last = arr[lastIndex];
+			arr[lastIndex] = x;
+			var i = 0;
+			
+			while(arr[i] != x) {
+				i++;
+			}
+			arr[lastIndex] = last;
+			
+			if(i < lastIndex || arr[lastIndex] == x) {
+				return i;
+			} else {
+				console.log("не найдено");
+				return null;
+			}
+		}
+		
+		var maxCount = 10000000;
+
+		var timeLoop = performance.now();
+		for (var i = 1; i < maxCount ; i++) peka(strings, 3);
+		timeLoop = performance.now() - timeLoop;
+
+		var timeRecursion = performance.now();
+		for (var i = 1; i < maxCount; i++) peka2(strings ,3);
+		timeRecursion = performance.now() - timeRecursion;
+
+		console.log( "Разница в " + (timeRecursion / timeLoop) + " раз" );
+		console.log(timeRecursion + "\n" + timeLoop);
+	</script>
+</body>
+</html>

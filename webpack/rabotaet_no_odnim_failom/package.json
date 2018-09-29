@@ -1,0 +1,24 @@
+{
+  "name": "webpack-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "css-loader": "*",
+    "pug": "*",
+    "pug-loader": "*",
+    "style-loader": "*",
+    "stylus": "*",
+    "stylus-loader": "*"
+  }
+}
